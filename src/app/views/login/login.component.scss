@@ -1,0 +1,16 @@
+.two-columns-container {
+  .row {
+    height: 100vh;
+
+    .left-column {
+      position: relative;
+      background-image: url('../../../assets/img/books.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+
+      .logo {
+        width: 100px;
+      }
+    }
+  }
+}

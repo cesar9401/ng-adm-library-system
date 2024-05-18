@@ -1,0 +1,39 @@
+<div class="container-fluid two-columns-container">
+  <div class="row">
+    <div class="d-none col-lg-4 text-white bg-primary left-column d-lg-flex flex-column p-5">
+      <h1>Biblioteca Ingen&iacute;eria CUNOC</h1>
+    </div>
+    <div class="col-12 col-lg bg-white right-column d-flex align-items-center justify-content-center">
+      <div class="w-50">
+        <h2 class="fw-bold h2">Iniciar sesi&oacute;n</h2>
+        <p class="mb-4 text-gray-600">Ingrese su usuario y contrase&ntilde;a para continuar</p>
+        <form class="">
+          <div class="mb-3">
+            <label for="sign-in-email" class="form-label">Correo electronico</label>
+            <div class="input-prefix-icon">
+              <app-material-icon>mail</app-material-icon>
+              <input type="email" class="form-control" id="sign-in-email" name="sign-in-email" placeholder="Eje: ctzoc@cunoc.edu.gt">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="sign-in-password" class="form-label">Contrase&ntilde;a</label>
+            <div class="input-prefix-icon input-suffix-icon">
+              <app-material-icon>lock</app-material-icon>
+              <input class="form-control" id="sign-in-password" name="sign-in-password" placeholder="Ingrese su contraseña" [type]="showPass ? 'text' : 'password'" >
+                <app-material-icon class="btn text-primary  btn-sm d-inline-flex type-toggle" (click)="showPass = !showPass">
+                  <span class="show-option" [hidden]="showPass">visibility</span>
+                  <span class="hide-option" [hidden]="!showPass">visibility_off</span>
+                </app-material-icon>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary w-100 my-1">Iniciar sesi&oacute;n</button>
+          <!--
+          <button [routerLink]="['/password-recovery']" type="button" class="btn btn-outline-primary w-100 my-1">
+            Recuperar mi contrase&ntilde;a
+          </button>
+          -->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

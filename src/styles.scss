@@ -2,3 +2,42 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+// Icon component sizing
+app-material-icon {
+  display: inline-flex;
+}
+
+// Input with icon utility
+.input-prefix-icon {
+  position: relative;
+
+  app-material-icon:first-child {
+    color: #ABB2B9;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translate(0, -50%);
+  }
+
+  .form-control {
+    padding-left: 48px;
+  }
+}
+
+
+.input-suffix-icon {
+  position: relative;
+
+  app-material-icon:last-child {
+    color: #ABB2B9;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translate(0, -50%);
+  }
+
+  .form-control {
+    padding-right: 48px;
+  }
+}
