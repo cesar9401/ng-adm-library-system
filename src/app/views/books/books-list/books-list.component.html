@@ -1,14 +1,15 @@
 <div class="container-fluid">
-  <div></div>
-  <div class="d-flex justify-content-between align-items-center py-4 bg-body-tertiary mb-5 app-content">
-    <div>
-      <h1 class="h3 text-primary">Libros</h1>
-    </div>
-    <div>
-      <button class="btn btn-primary d-flex justify-content-center" routerLink="add">
-        <app-material-icon>add</app-material-icon>
-        Crear
-      </button>
+  <div class="py-4 bg-body-tertiary mb-5 app-content">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <h1 class="h3 text-primary">Libros</h1>
+      </div>
+      <div>
+        <button class="btn btn-primary d-flex justify-content-center" routerLink="add">
+          <app-material-icon>add</app-material-icon>
+          Crear
+        </button>
+      </div>
     </div>
   </div>
 
@@ -16,20 +17,28 @@
     <div class="table-container">
       <table class="w-100">
         <tr>
-          <th>ISBN</th>
-          <th>T&iacute;tulo</th>
-          <th>Autor</th>
-          <th>Editorial</th>
-          <th>Fecha de publicaci&oacute;n</th>
-          <th>Stock</th>
+          <th class="th-isbn">ISBN</th>
+          <th class="th-title">T&iacute;tulo</th>
+          <th class="th-author">Autor</th>
+          <th class="th-editorial">Editorial</th>
+          <th class="th-date">Fecha de publicaci&oacute;n</th>
+          <th class="th-stock">Stock</th>
+          <th class="th-action">Acciones</th>
         </tr>
         <tr *ngFor="let book of books">
           <td>{{ book.isbn }}</td>
           <td>{{ book.title }}</td>
           <td>{{ book.author }}</td>
-          <td>{{ book.publicationDate | date }}</td>
           <td>{{ book.editorial }}</td>
+          <td>{{ book.publicationDate | date }}</td>
           <td>{{ book.stock }}</td>
+          <td>
+            <div class="d-flex justify-content-center align-items-center">
+              <button class="btn btn-outline-success d-flex align-items-center p-1" [routerLink]="['edit', book.bookId]">
+                <app-material-icon>edit</app-material-icon>
+              </button>
+            </div>
+          </td>
         </tr>
       </table>
     </div>

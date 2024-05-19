@@ -45,8 +45,8 @@ app-material-icon {
 }
 
 .app-content, .body {
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
 
 .table-container {
@@ -54,7 +54,8 @@ app-material-icon {
   border-radius: 5px;
   overflow: auto;
   height: 100%;
-  min-height: 600px;
+  min-height: 650px;
+  max-height: 650px;
 }
 
 table {
@@ -86,6 +87,8 @@ table {
     }
 
     th {
+      background-color: white;
+
       &:first-of-type:not(.no-sticky) {
         position: sticky;
         left: 0;
