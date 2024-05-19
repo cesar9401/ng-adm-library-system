@@ -1,0 +1,15 @@
+<ng-container *ngFor="let toast of toastService.toasts">
+  <ngb-toast [autohide]="true">
+    <ng-template ngbToastHeader>
+      <div class="me-auto d-flex align-items-center justify-content-center">
+        <app-material-icon [class]="toast.clazz">
+          {{ toast.icon }}
+        </app-material-icon>
+        <strong class="mx-1" [ngClass]="toast.clazz">{{ toast.header }}</strong>
+      </div>
+    </ng-template>
+    <span>
+      {{ toast.message }}
+    </span>
+  </ngb-toast>
+</ng-container>
