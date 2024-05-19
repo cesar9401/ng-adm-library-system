@@ -13,6 +13,11 @@ import { MaterialIconComponent } from './components/material-icon/material-icon.
 import { ToastComponent } from './components/toast/toast.component';
 import { HomeComponent } from './views/home/home.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { BooksCrudComponent } from './views/books/books-crud/books-crud.component';
+import { BooksListComponent } from './views/books/books-list/books-list.component';
+import { FormLabelComponent } from './components/form-label/form-label.component';
+import { CrudFooterComponent } from './components/crud-footer/crud-footer.component';
+import { SingleDatePickerComponent } from './components/single-date-picker/single-date-picker.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     MaterialIconComponent,
     ToastComponent,
     HomeComponent,
-    SideBarComponent
+    SideBarComponent,
+    BooksCrudComponent,
+    BooksListComponent,
+    FormLabelComponent,
+    CrudFooterComponent,
+    SingleDatePickerComponent
   ],
   imports: [
     BrowserModule,

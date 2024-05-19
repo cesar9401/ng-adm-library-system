@@ -1,0 +1,17 @@
+<div>
+  <app-form-label [label]="label" [required]="required"></app-form-label>
+  <div class="input-group">
+    <input
+      class="form-control"
+      placeholder="yyyy-mm-dd"
+      name="dp"
+      (ngModelChange)="onModelChange($event)"
+      [(ngModel)]="model"
+      ngbDatepicker
+      #d="ngbDatepicker"
+    />
+    <button class="btn btn-outline-primary py-0 d-flex" (click)="d.toggle()" type="button">
+      <app-material-icon class="my-auto">calendar_month</app-material-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col my-4">
+      <h1 class="h3 text-primary fw-semibold">
+        {{ bookId ? 'Editar libro' : 'Agregar libro' }}
+      </h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class="mb-4">
+        <app-form-label label="ISBN"></app-form-label>
+        <input class="form-control" type="text" name="isbn" placeholder="Ej: 978-3-16-148410-0" [(ngModel)]="book.isbn">
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="mb-4">
+        <app-form-label label="Título"></app-form-label>
+        <input class="form-control" type="text" name="title" placeholder="Ej: La historia del Hada y El Mago" [(ngModel)]="book.title">
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="mb-4">
+        <app-form-label label="Autor"></app-form-label>
+        <input class="form-control" type="text" name="author" placeholder="Ej: Pedro Pérez León" [(ngModel)]="book.author">
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="mb-4">
+        <app-single-date-picker
+          label="Fecha de publicación"
+          [(date)]="book.publicationDate"
+        >
+        </app-single-date-picker>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="mb-4">
+        <app-form-label label="Editorial"></app-form-label>
+        <input class="form-control" type="text" name="author" placeholder="Ej: Caja vieja" [(ngModel)]="book.editorial">
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="mb-4">
+        <app-form-label label="Stock"></app-form-label>
+        <input class="form-control" type="text" name="author" placeholder="Ej: 32" [(ngModel)]="book.stock">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <app-crud-footer
+      [cancelRoute]="['/books']"
+      (saveEvent)="onSubmit()"
+    >
+    </app-crud-footer>
+  </div>
+</div>
