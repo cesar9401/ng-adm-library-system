@@ -14,7 +14,7 @@ export class AdmBookService {
   }
 
   findAll() {
-    return this.http.get<AdmBook[]>(this.URL);
+    return this.http.get<AdmBook[]>(this.URL, { observe: 'response' });
   }
 
   findById(bookId: number) {

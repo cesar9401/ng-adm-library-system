@@ -1,1 +1,37 @@
-<p>books-list works!</p>
+<div class="container-fluid">
+  <div></div>
+  <div class="d-flex justify-content-between align-items-center py-4 bg-body-tertiary mb-5 app-content">
+    <div>
+      <h1 class="h3 text-primary">Libros</h1>
+    </div>
+    <div>
+      <button class="btn btn-primary d-flex justify-content-center" routerLink="add">
+        <app-material-icon>add</app-material-icon>
+        Crear
+      </button>
+    </div>
+  </div>
+
+  <div class="body mb-auto mt-5">
+    <div class="table-container">
+      <table class="w-100">
+        <tr>
+          <th>ISBN</th>
+          <th>T&iacute;tulo</th>
+          <th>Autor</th>
+          <th>Editorial</th>
+          <th>Fecha de publicaci&oacute;n</th>
+          <th>Stock</th>
+        </tr>
+        <tr *ngFor="let book of books">
+          <td>{{ book.isbn }}</td>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.publicationDate | date }}</td>
+          <td>{{ book.editorial }}</td>
+          <td>{{ book.stock }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
