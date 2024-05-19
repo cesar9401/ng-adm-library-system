@@ -16,3 +16,9 @@ export class AdmBook {
   public editorial!: string;
   public stock!: number;
 }
+
+export class AdmCareer {
+  public careerId!: number;
+  public code!: string;
+  public name!: string;
+}

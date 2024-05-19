@@ -19,6 +19,8 @@ import { FormLabelComponent } from './components/form-label/form-label.component
 import { CrudFooterComponent } from './components/crud-footer/crud-footer.component';
 import { SingleDatePickerComponent } from './components/single-date-picker/single-date-picker.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { CareersCrudComponent } from './views/careers/careers-crud/careers-crud.component';
+import { CareersListComponent } from './views/careers/careers-list/careers-list.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     FormLabelComponent,
     CrudFooterComponent,
     SingleDatePickerComponent,
-    PaginationComponent
+    PaginationComponent,
+    CareersCrudComponent,
+    CareersListComponent
   ],
   imports: [
     BrowserModule,

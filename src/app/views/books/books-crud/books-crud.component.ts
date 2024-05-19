@@ -35,7 +35,11 @@ export class BooksCrudComponent implements OnInit {
           .subscribe({
             next: book => this.book = book,
             error: (e: HttpErrorResponse) => {
-              if (e.status == 404) return this.toastService.showError(MessageEnum.MSG_DEFAULT_404)
+              if (e.status == 404) {
+                this.toastService.showError(MessageEnum.MSG_DEFAULT_404)
+                void this.router.navigate(['/books'])
+                return;
+              }
               this.toastService.showError(MessageEnum.MSG_ERROR_SERVER);
             }
           });
@@ -49,7 +53,7 @@ export class BooksCrudComponent implements OnInit {
     this.bookService.save(this.book)
       .subscribe({
         next: _ => {
-          this.toastService.showSucess('Cambios guardados con éxito');
+          this.toastService.showSucess(MessageEnum.MSG_CHANGES_SAVED);
           void this.router.navigate(['/books']);
         },
         error: (e: HttpErrorResponse) => {

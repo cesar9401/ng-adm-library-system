@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col my-4">
+      <h1 class="h3 text-primary fw-semibold">
+        {{ careerId ? 'Editar carrera' : 'Agregar carrera' }}
+      </h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class="mb-4">
+        <app-form-label label="Código"></app-form-label>
+        <input class="form-control" type="text" name="code" placeholder="Ej. ICS" [(ngModel)]="career.code">
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="mb-4">
+        <app-form-label label="Nombre"></app-form-label>
+        <input class="form-control" type="text" name="name" placeholder="Ej: Ingenieria en Ciencias y Sistemas" [(ngModel)]="career.name">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <app-crud-footer
+      [cancelRoute]="['/careers']"
+      (saveEvent)="onSubmit()"
+    >
+    </app-crud-footer>
+  </div>
+</div>
