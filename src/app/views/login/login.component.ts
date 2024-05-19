@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthReqDto } from 'src/app/data/adm.model';
-import { AuthenticationService } from 'src/app/services/authentication.service';
-import { ToastService } from 'src/app/services/toast.service';
+import { AuthenticationService } from 'src/app/services/adm/authentication.service';
+import { ToastService } from 'src/app/services/util/toast.service';
 
 @Component({
   selector: 'app-login',

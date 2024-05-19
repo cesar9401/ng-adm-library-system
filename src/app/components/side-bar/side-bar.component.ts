@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CurrentUserService } from 'src/app/services/current-user.service';
+import { CurrentUserService } from 'src/app/services/adm/current-user.service';
 
 @Component({
   selector: 'app-side-bar',

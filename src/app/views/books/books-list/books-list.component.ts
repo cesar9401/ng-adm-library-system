@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AdmBook } from 'src/app/data/adm.model';
 import { SimpleList } from 'src/app/data/simple-list';
 import { MessageEnum } from 'src/app/enums/message.enum';
-import { AdmBookService } from 'src/app/services/adm-book.service';
-import { ToastService } from 'src/app/services/toast.service';
+import { AdmBookService } from 'src/app/services/adm/adm-book.service';
+import { ToastService } from 'src/app/services/util/toast.service';
 
 @Component({
   selector: 'app-books-list',
