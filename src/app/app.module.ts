@@ -12,6 +12,7 @@ import { LoginComponent } from './views/login/login.component';
 import { MaterialIconComponent } from './components/material-icon/material-icon.component';
 import { ToastComponent } from './components/toast/toast.component';
 import { HomeComponent } from './views/home/home.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './views/home/home.component';
     LoginComponent,
     MaterialIconComponent,
     ToastComponent,
-    HomeComponent
+    HomeComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
