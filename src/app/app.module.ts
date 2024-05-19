@@ -18,6 +18,7 @@ import { BooksListComponent } from './views/books/books-list/books-list.componen
 import { FormLabelComponent } from './components/form-label/form-label.component';
 import { CrudFooterComponent } from './components/crud-footer/crud-footer.component';
 import { SingleDatePickerComponent } from './components/single-date-picker/single-date-picker.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SingleDatePickerComponent } from './components/single-date-picker/singl
     BooksListComponent,
     FormLabelComponent,
     CrudFooterComponent,
-    SingleDatePickerComponent
+    SingleDatePickerComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

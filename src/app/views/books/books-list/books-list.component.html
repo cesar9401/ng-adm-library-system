@@ -42,5 +42,15 @@
         </tr>
       </table>
     </div>
+    <div>
+      <app-pagination
+        [(page)]="page"
+        [pageSize]="pageSize"
+        [collectionSize]="collectionSize"
+        [currentListSize]="this.books.length"
+        (pageChange)="onPageChange($event)"
+      >
+      </app-pagination>
+    </div>
   </div>
 </div>

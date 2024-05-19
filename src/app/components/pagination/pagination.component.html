@@ -1,0 +1,18 @@
+<div class="mt-4 d-flex align-items-center justify-content-between">
+  <div>
+    <p class="text-primary py-0">
+      {{ message }}
+    </p>
+  </div>
+  <ngb-pagination
+    [collectionSize]="collectionSize"
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [maxSize]="10"
+    [rotate]="true"
+    [ellipses]="false"
+    [boundaryLinks]="true"
+    (pageChange)="onPageChange($event)"
+  >
+  </ngb-pagination>
+</div>
