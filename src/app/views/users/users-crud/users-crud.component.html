@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col my-4">
+      <h1 class="h3 text-primary fw-semibold">
+        {{ userId ? 'Editar usuario' : 'Agregar usuario' }}
+      </h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class="mb-4">
+        <app-form-label label="Nombre"></app-form-label>
+        <input class="form-control" type="text" name="name" placeholder="Ej: Luis Miguel" [(ngModel)]="user.fullName">
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="mb-4">
+        <app-form-label label="Correo electrónico"></app-form-label>
+        <input class="form-control" type="text" name="name" placeholder="Ej: luismi@cunoc.ed.gt" [(ngModel)]="user.email">
+      </div>
+    </div>
+
+    <ng-container *ngIf="!userId">
+      <div class="col-12 col-lg-6">
+        <div class="mb-4">
+          <app-form-label label="Contraseña"></app-form-label>
+          <div class="input-prefix-icon input-suffix-icon">
+            <app-material-icon>lock</app-material-icon>
+            <input class="form-control" [type]="showPass0 ? 'text' : 'password'" name="password0" placeholder="Ingrese su contraseña" [(ngModel)]="user.password">
+            <app-material-icon class="btn text-primary btn-sm d-inline-flex" (click)="showPass0 = !showPass0">
+              {{ showPass0 ? 'visibility' : 'visibility_off' }}
+            </app-material-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="mb-4">
+          <app-form-label label="Confirmar contraseña"></app-form-label>
+          <div class="input-prefix-icon input-suffix-icon">
+            <app-material-icon>lock</app-material-icon>
+            <input class="form-control" [type]="showPass1 ? 'text' : 'password'" name="password1" placeholder="Confirme su contraseña" [(ngModel)]="password1">
+            <app-material-icon class="btn text-primary btn-sm d-inline-flex" (click)="showPass1 = !showPass1">
+              {{ showPass1 ? 'visibility' : 'visibility_off' }}
+            </app-material-icon>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="row">
+    <app-crud-footer
+      [cancelRoute]="['/users']"
+      (saveEvent)="onSubmit()"
+    >
+    </app-crud-footer>
+  </div>
+</div>

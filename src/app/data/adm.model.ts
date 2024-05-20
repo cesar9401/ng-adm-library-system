@@ -22,3 +22,23 @@ export class AdmCareer {
   public code!: string;
   public name!: string;
 }
+
+export class AdmUser {
+  public userId!: number;
+  public email!: string;
+  public password!: string;
+  public fullName!: string;
+  public userRoles: AdmUserRole[] = [];
+}
+
+export class AdmRole {
+  public roleId!: number;
+  public name!: string;
+  public description!: string;
+}
+
+export class AdmUserRole {
+  public userRoleId!: number;
+  public user!: AdmUser;
+  public role!: AdmRole;
+}

@@ -6,6 +6,8 @@ import { CareersCrudComponent } from 'src/app/views/careers/careers-crud/careers
 import { CareersListComponent } from 'src/app/views/careers/careers-list/careers-list.component';
 import { HomeComponent } from 'src/app/views/home/home.component';
 import { LoginComponent } from 'src/app/views/login/login.component';
+import { UsersCrudComponent } from 'src/app/views/users/users-crud/users-crud.component';
+import { UsersListComponent } from 'src/app/views/users/users-list/users-list.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,13 @@ const routes: Routes = [
       { path: '', component: CareersListComponent },
       { path: 'add', component: CareersCrudComponent },
       { path: 'edit/:id', component: CareersCrudComponent }
+    ]
+  },
+  {
+    path: 'users', children: [
+      { path: '', component: UsersListComponent },
+      { path: 'add', component: UsersCrudComponent },
+      { path: 'edit/:id', component: UsersCrudComponent }
     ]
   }
 ];

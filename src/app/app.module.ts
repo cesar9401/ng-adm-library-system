@@ -21,6 +21,8 @@ import { SingleDatePickerComponent } from './components/single-date-picker/singl
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { CareersCrudComponent } from './views/careers/careers-crud/careers-crud.component';
 import { CareersListComponent } from './views/careers/careers-list/careers-list.component';
+import { UsersCrudComponent } from './views/users/users-crud/users-crud.component';
+import { UsersListComponent } from './views/users/users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { CareersListComponent } from './views/careers/careers-list/careers-list.
     SingleDatePickerComponent,
     PaginationComponent,
     CareersCrudComponent,
-    CareersListComponent
+    CareersListComponent,
+    UsersCrudComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,

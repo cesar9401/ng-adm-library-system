@@ -20,7 +20,7 @@
             <div class="input-prefix-icon input-suffix-icon">
               <app-material-icon>lock</app-material-icon>
               <input class="form-control" id="sign-in-password" name="sign-in-password" placeholder="Ingrese su contraseña" [type]="showPass ? 'text' : 'password'" [(ngModel)]="authReq.password">
-                <app-material-icon class="btn text-primary  btn-sm d-inline-flex type-toggle" (click)="showPass = !showPass">
+                <app-material-icon class="btn text-primary btn-sm d-inline-flex type-toggle" (click)="showPass = !showPass">
                   <span class="show-option" [hidden]="showPass">visibility</span>
                   <span class="hide-option" [hidden]="!showPass">visibility_off</span>
                 </app-material-icon>
