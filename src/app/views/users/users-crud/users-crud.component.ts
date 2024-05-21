@@ -46,9 +46,9 @@ export class UsersCrudComponent implements OnInit {
               }
               this.toastService.showError(MessageEnum.MSG_ERROR_SERVER);
             }
-          })
+          });
       }
-    })
+    });
   }
 
   onSubmit() {

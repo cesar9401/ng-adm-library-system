@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { NgSelectModule } from '@ng-select/ng-select';
 import { AuthInterceptor } from 'src/app/interceptor/auth.interceptor';
 import { UnauthInterceptor } from 'src/app/interceptor/unauth.interceptor';
 
@@ -52,7 +53,8 @@ import { StudentsListComponent } from './views/students/students-list/students-l
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgSelectModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

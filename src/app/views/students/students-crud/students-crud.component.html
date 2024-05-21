@@ -8,9 +8,21 @@
   </div>
 
   <div class="row">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-12">
       <div class="mb-4">
         <app-form-label label="Carrera"></app-form-label>
+        <ng-select
+          [(ngModel)]="student.career"
+          [compareWith]="compareWith"
+          appendTo="body"
+        >
+          <ng-container *ngFor="let career of careers">
+            <ng-option [value]="career">
+              <span class="fw-semibold small">({{ career.code }})</span>
+              {{ career.name }}
+            </ng-option>
+          </ng-container>
+        </ng-select>
       </div>
     </div>
 
@@ -23,6 +35,13 @@
 
     <div class="col-12 col-lg-6">
       <div class="mb-4">
+        <app-form-label label="Correo electrónico"></app-form-label>
+        <input class="form-control" type="text" name="email" placeholder="Eje: luismi@cunoc.edu.gt" [(ngModel)]="student.user.email">
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="mb-4">
         <app-form-label label="Nombre"></app-form-label>
         <input class="form-control" type="text" name="name" placeholder="Eje: Luis Miguel Gallego" [(ngModel)]="student.user.fullName">
       </div>
@@ -30,8 +49,8 @@
 
     <div class="col-12 col-lg-6">
       <div class="mb-4">
-        <app-form-label label="Correo electrónico"></app-form-label>
-        <input class="form-control" type="text" name="email" placeholder="Eje: luismi@cunoc.edu.gt" [(ngModel)]="student.user.fullName">
+        <app-form-label label="Fecha de nacimiento"></app-form-label>
+        <app-single-date-picker [(date)]="student.birthday"></app-single-date-picker>
       </div>
     </div>
 

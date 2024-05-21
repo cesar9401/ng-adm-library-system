@@ -5,6 +5,8 @@ $primary: #091b79;
 
 @import 'bootstrap/scss/bootstrap';
 
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
 // Icon component sizing
 app-material-icon {
   display: inline-flex;
