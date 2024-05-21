@@ -36,7 +36,7 @@ export class StudentsCrudComponent implements OnInit {
     this.route.paramMap.subscribe({
       next: params => {
         this.studentId = Number(params.get('id') ?? 0);
-        if (!this.student) return;
+        if (!this.studentId) return;
 
         this.studentService.findById(this.studentId)
           .subscribe({
@@ -72,8 +72,8 @@ export class StudentsCrudComponent implements OnInit {
           void this.router.navigate(['/students']);
         },
         error: (e: HttpErrorResponse) => {
-          if (e.error == 'carnet_already_exists') this.toastService.showError('El carnet ya esta registrado, por favor verifique')
-          if (e.error == 'email_already_taken') this.toastService.showError('El carnet ya esta registrado, por favor verifique')
+          if (e.error == 'carnet_already_exists') return this.toastService.showError('El carnet ya esta registrado, por favor verifique')
+          if (e.error == 'email_already_exists') return this.toastService.showError('El carnet ya esta registrado, por favor verifique')
 
           this.toastService.showError(MessageEnum.MSG_ERROR_SERVER);
         }
