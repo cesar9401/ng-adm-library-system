@@ -23,6 +23,8 @@ import { CareersCrudComponent } from './views/careers/careers-crud/careers-crud.
 import { CareersListComponent } from './views/careers/careers-list/careers-list.component';
 import { UsersCrudComponent } from './views/users/users-crud/users-crud.component';
 import { UsersListComponent } from './views/users/users-list/users-list.component';
+import { StudentsCrudComponent } from './views/students/students-crud/students-crud.component';
+import { StudentsListComponent } from './views/students/students-list/students-list.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { UsersListComponent } from './views/users/users-list/users-list.componen
     CareersCrudComponent,
     CareersListComponent,
     UsersCrudComponent,
-    UsersListComponent
+    UsersListComponent,
+    StudentsCrudComponent,
+    StudentsListComponent
   ],
   imports: [
     BrowserModule,

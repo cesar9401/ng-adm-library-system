@@ -42,3 +42,11 @@ export class AdmUserRole {
   public user!: AdmUser;
   public role!: AdmRole;
 }
+
+export class AdmStudent {
+  public studentId!: number;
+  public career!: AdmCareer;
+  public user: AdmUser = new AdmUser();
+  public carnet!: string;
+  public birthday!: string;
+}
