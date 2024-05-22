@@ -26,6 +26,7 @@ import { UsersCrudComponent } from './views/users/users-crud/users-crud.componen
 import { UsersListComponent } from './views/users/users-list/users-list.component';
 import { StudentsCrudComponent } from './views/students/students-crud/students-crud.component';
 import { StudentsListComponent } from './views/students/students-list/students-list.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { StudentsListComponent } from './views/students/students-list/students-l
     UsersCrudComponent,
     UsersListComponent,
     StudentsCrudComponent,
-    StudentsListComponent
+    StudentsListComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

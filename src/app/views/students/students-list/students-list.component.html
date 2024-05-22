@@ -20,7 +20,8 @@
           <th class="th-carnet">Carnet</th>
           <th class="th-name">Nombre</th>
           <th class="th-email">Correo electr&oacute;nico</th>
-          <th class="th-carerr">Carrera</th>
+          <th class="th-career">Carrera</th>
+          <th class="th-action">Acciones</th>
         </tr>
         <ng-container *ngFor="let student of students">
           <tr>
@@ -28,6 +29,13 @@
             <td>{{ student.user.fullName }}</td>
             <td>{{ student.user.email }}</td>
             <td>{{ student.career.name }}</td>
+            <td>
+              <div class="d-flex justify-content-center align-items-center">
+                <button class="btn btn-outline-success d-flex align-items-center p-1" [routerLink]="['edit', student.studentId]">
+                  <app-material-icon>edit</app-material-icon>
+                </button>
+              </div>
+            </td>
           </tr>
         </ng-container>
       </table>

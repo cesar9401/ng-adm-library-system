@@ -71,6 +71,7 @@ export class BooksCrudComponent implements OnInit {
       && !!this.book.editorial
       && this.book.stock != undefined
       && !isNaN(Number(this.book.stock))
+      && Number(this.book.stock) >= 0
       && !!this.book.isbn.trim()
       && !!this.book.author.trim()
       && !!this.book.editorial.trim();
