@@ -32,7 +32,7 @@ export class UsersListComponent extends SimpleList implements OnInit {
           this.users = response.body ?? [];
           this.collectionSize = Number(response.headers.get('X-Total-Count') ?? 0);
         },
-        error: _ => this.toastService.showError(MessageEnum.MSG_CHANGES_SAVED)
+        error: _ => this.toastService.showError(MessageEnum.MSG_ERROR_SERVER)
       });
   }
 }

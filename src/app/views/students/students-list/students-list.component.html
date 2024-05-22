@@ -15,10 +15,32 @@
 
   <div class="body mb-auto my-5">
     <div class="table-container">
-      <!-- TODO: add table here -->
+      <table class="w-100">
+        <tr>
+          <th class="th-carnet">Carnet</th>
+          <th class="th-name">Nombre</th>
+          <th class="th-email">Correo electr&oacute;nico</th>
+          <th class="th-carerr">Carrera</th>
+        </tr>
+        <ng-container *ngFor="let student of students">
+          <tr>
+            <td>{{ student.carnet }}</td>
+            <td>{{ student.user.fullName }}</td>
+            <td>{{ student.user.email }}</td>
+            <td>{{ student.career.name }}</td>
+          </tr>
+        </ng-container>
+      </table>
     </div>
     <div>
-      <!-- TODO: add pagination here -->
+      <app-pagination
+        [(page)]="page"
+        [pageSize]="pageSize"
+        [collectionSize]="collectionSize"
+        [currentListSize]="this.students.length"
+        (pageChange)="onPageChange($event)"
+      >
+      </app-pagination>
     </div>
   </div>
 </div>
